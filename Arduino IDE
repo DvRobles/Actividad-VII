@@ -1,0 +1,21 @@
+// C++ code
+// vii
+
+const int pot = A0;  // Pin para el potenciómetro
+const int ldr = A1;   // Pin para el LDR
+
+void setup() {
+  Serial.begin(9600);  // Inicializa la comunicación serial
+}
+
+void loop() {
+  int potValue = analogRead(pot);  // Lee el valor del potenciómetro
+  int ldrValue = analogRead(ldr);   // Lee el valor del LDR
+
+  Serial.print("Potenciómetro: ");
+  Serial.print(potValue);
+  Serial.print("   LDR: ");
+  Serial.println(ldrValue);
+
+  delay(1000);  // Espera 1 segundo antes de leer de nuevo
+}
